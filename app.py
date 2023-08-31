@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template
+from flask import Flask, request
 
 obj = Flask(__name__)
 
@@ -13,14 +13,14 @@ def math_operations():
     number2 = request.json["number2"]
 
     if operations == "add":
-        result = number1 + number2
+        result = int(number1) + int(number2)
     elif operations == "multiply":
-        result = number1 * number2
+        result = int(number1) * int(number2)
     elif operations == "division":
-        result = number1 / number2
+        result = int(number1) / int(number2)
     else:
-        result = number1 - number2
-    return result
+        result = int(number1) - int(number2)
+    return f"The operations is {operations} and the result is {result}"
 
 
 print(__name__)
