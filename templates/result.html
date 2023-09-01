@@ -1,0 +1,20 @@
+<html>
+<head>
+</head>
+
+<body>
+  <div class="cal">
+	<h1>Calculater</h1>
+
+  <form action="{{ url_for('math_operations')}}" method="post"> 
+    
+        <input type="text" name="operations" placeholder="operations" required="required" />
+        <input type="text" name="number1" placeholder="number1" required="required" />
+        <input type="text" name="number2" placeholder="number2" required="required" />
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Calculate Button</button>
+  </form>
+
+   <br>
+   <br>
+ </div>
